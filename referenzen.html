@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Walsumer Fliesenleger – Referenzen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <div class="nav">
+                <div class="nav-logo">
+                    <div class="nav-logo-badge">WF</div>
+                    <div>
+                        Walsumer Fliesenleger<br />
+                        <span style="font-weight:400;font-size:0.8rem;color:var(--muted)">Fliesen • Bäder • Böden</span>
+                    </div>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html">Start</a>
+                    <a href="leistungen.html">Leistungen</a>
+                    <a href="referenzen.html" class="active">Referenzen</a>
+                    <a href="ablauf.html">Ablauf</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </nav>
+                <div class="nav-contact">
+                    <span>☎ 01234 / 567890</span>
+                    <button class="btn-primary" onclick="window.location.href='kontakt.html'">
+                        Angebot anfragen
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-section">
+                <div class="section-header">
+                    <h1>Referenzen & Projekte</h1>
+                    <p>
+                        Ein kleiner Einblick in typische Arbeiten. Weitere Projekte zeigen wir Ihnen
+                        gerne bei einem persönlichen Termin.
+                    </p>
+                </div>
+
+                <h2>Ausgewählte Projekte</h2>
+                <div class="card-grid" style="margin-top:10px;">
+                    <article class="card">
+                        <h3>Familienbad in Walsum</h3>
+                        <p>
+                            Komplettsanierung mit bodengleicher Dusche, Nischen und großformatigen Wandfliesen.
+                            Rutschhemmender Bodenbelag und dezente Fugenfarbe.
+                        </p>
+                        <ul class="clean">
+                            <li>10 Tage Bauzeit</li>
+                            <li>Großformat 60×120 cm</li>
+                            <li>Abdichtung nach Norm</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Küchenrückwand in Dinslaken</h3>
+                        <p>
+                            Moderne Fliesenrückwand mit leicht zu reinigender Oberfläche, abgestimmt auf Fronten
+                            und Arbeitsplatte.
+                        </p>
+                        <ul class="clean">
+                            <li>1½ Tage Arbeit</li>
+                            <li>Feinsteinzeug matt</li>
+                            <li>Passende Sockelleisten</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Terrasse in Duisburg</h3>
+                        <p>
+                            Erneuerung einer Alt-Terrasse mit frostsicheren Platten, korrektem Gefälle
+                            und neuen Randabschlüssen.
+                        </p>
+                        <ul class="clean">
+                            <li>ca. 25 m² Fläche</li>
+                            <li>Entwässerung verbessert</li>
+                            <li>Frost- und rutschhemmend</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="page-section">
+                <div class="section-header">
+                    <h2>Kundenstimmen</h2>
+                    <p>
+                        Viele unserer Aufträge kommen über Empfehlungen. Hier ein paar Rückmeldungen
+                        von Kunden aus der Region.
+                    </p>
+                </div>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Familie K., Duisburg</h3>
+                        <p>
+                            „Sehr zuverlässige Arbeit, Termine wurden eingehalten und die Baustelle war
+                            immer ordentlich. Wir würden jederzeit wieder beauftragen.“
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>M. S., Dinslaken</h3>
+                        <p>
+                            „Top Beratung bei der Fliesenauswahl, alles exakt geschnitten und sauber verfugt.
+                            Das Ergebnis passt perfekt zur neuen Küche.“
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>H. T., Walsum</h3>
+                        <p>
+                            „Von der ersten Besichtigung bis zur letzten Fuge lief alles strukturiert
+                            und ohne Überraschungen. Klare Empfehlung.“
+                        </p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-inner">
+                <div>
+                    &copy; <span id="year"></span> Walsumer Fliesenleger – Alle Rechte vorbehalten.
+                </div>
+                <div class="footer-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

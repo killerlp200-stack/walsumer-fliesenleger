@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Walsumer Fliesenleger – Leistungen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <div class="nav">
+                <div class="nav-logo">
+                    <div class="nav-logo-badge">WF</div>
+                    <div>
+                        Walsumer Fliesenleger<br />
+                        <span style="font-weight:400;font-size:0.8rem;color:var(--muted)">Fliesen • Bäder • Böden</span>
+                    </div>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html">Start</a>
+                    <a href="leistungen.html" class="active">Leistungen</a>
+                    <a href="referenzen.html">Referenzen</a>
+                    <a href="ablauf.html">Ablauf</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </nav>
+                <div class="nav-contact">
+                    <span>☎ 01234 / 567890</span>
+                    <button class="btn-primary" onclick="window.location.href='kontakt.html'">
+                        Angebot anfragen
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-section">
+                <div class="section-header">
+                    <h1>Unsere Leistungen</h1>
+                    <p>
+                        Von der kleinen Reparatur bis zur kompletten Badsanierung –
+                        wir unterstützen Sie bei Projekten jeder Größe.
+                    </p>
+                </div>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Bad & WC</h3>
+                        <p>
+                            Planung und Ausführung von Komplettbädern, inkl. Vorarbeiten,
+                            Abdichtung und Fliesenverlegung.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Küche & Spritzbereiche</h3>
+                        <p>
+                            Fliesen für Küchenzeilen, Nischen und Arbeitsbereiche – robust, hygienisch, modern.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Wohnräume & Flure</h3>
+                        <p>
+                            Bodenfliesen für beanspruchte Bereiche mit hoher Belastbarkeit und leichter Pflege.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Balkon & Terrasse</h3>
+                        <p>
+                            Witterungsbeständige Beläge mit korrektem Gefälle, Randabschlüssen und Abdichtung.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Reparatur & Ausbesserung</h3>
+                        <p>
+                            Austausch beschädigter Fliesen, Neuverfugung, Silikonfugen und kleine Instandsetzungen.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Beratung & Planung</h3>
+                        <p>
+                            Unterstützung bei Formaten, Farben und Verlegemustern, damit das Ergebnis zum Raum passt.
+                        </p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-inner">
+                <div>
+                    &copy; <span id="year"></span> Walsumer Fliesenleger – Alle Rechte vorbehalten.
+                </div>
+                <div class="footer-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

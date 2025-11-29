@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Walsumer Fliesenleger – Startseite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Ihr Fliesenleger in Walsum und Umgebung: Bad, Küche, Boden, Terrasse. Fachgerechte Beratung, saubere Ausführung, faire Preise.">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <div class="nav">
+                <div class="nav-logo">
+                    <div class="nav-logo-badge">WF</div>
+                    <div>
+                        Walsumer Fliesenleger<br />
+                        <span style="font-weight:400;font-size:0.8rem;color:var(--muted)">Fliesen • Bäder • Böden</span>
+                    </div>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html" class="active">Start</a>
+                    <a href="leistungen.html">Leistungen</a>
+                    <a href="referenzen.html">Referenzen</a>
+                    <a href="ablauf.html">Ablauf</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </nav>
+                <div class="nav-contact">
+                    <span>☎ 01234 / 567890</span>
+                    <button class="btn-primary" onclick="window.location.href='kontakt.html'">
+                        Angebot anfragen
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div>
+                    <div class="hero-badge">
+                        <div class="hero-badge-dot"></div>
+                        Region Duisburg-Walsum & Umgebung
+                    </div>
+                    <h1>
+                        Fliesen&shy;arbeiten & Badsanierung
+                        <span>vom Fachbetrieb</span>
+                    </h1>
+                    <p class="hero-sub">
+                        Wir planen und verlegen Fliesen, Mosaik und Naturstein für Bad, Küche,
+                        Boden und Terrasse – sauber, termintreu und mit persönlicher Beratung vor Ort.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn-primary" onclick="window.location.href='kontakt.html'">
+                            Kostenloses Angebot anfragen
+                        </button>
+                        <button class="btn-secondary" onclick="window.location.href='leistungen.html'">
+                            Leistungen ansehen
+                        </button>
+                    </div>
+                    <div class="hero-note">
+                        Privat & Gewerbe · Komplettbäder · Altbausanierung · Reparaturen
+                    </div>
+                </div>
+
+                <aside class="hero-side">
+                    <h2>Warum wir gut zu Ihrem Projekt passen</h2>
+                    <p>
+                        Persönlicher Ansprechpartner, saubere Baustellen und eine Ausführung,
+                        die auch nach Jahren noch Freude macht.
+                    </p>
+                    <ul class="clean">
+                        <li>Meisterbetrieb in der Region</li>
+                        <li>Transparente Angebote ohne versteckte Kosten</li>
+                        <li>Termintreue und ordentliche Abwicklung</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section class="page-section">
+                <div class="section-header">
+                    <h2>Kurzer Überblick</h2>
+                    <p>Ein Auszug aus dem, was wir täglich für unsere Kunden umsetzen.</p>
+                </div>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Bad & WC</h3>
+                        <p>Komplette Bäder mit bodengleichen Duschen, Nischen und pflegeleichten Oberflächen.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Küche & Wohnräume</h3>
+                        <p>Robuste, moderne Fliesen für Bereiche, in denen täglich gelebt und gearbeitet wird.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Balkon & Terrasse</h3>
+                        <p>Frostsichere Beläge inkl. fachgerechter Abdichtung für langlebige Außenflächen.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-inner">
+                <div>
+                    &copy; <span id="year"></span> Walsumer Fliesenleger – Alle Rechte vorbehalten.
+                </div>
+                <div class="footer-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
