@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Walsumer Fliesenleger – Bad & WC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <div class="nav">
+                <div class="nav-logo">
+                    <div class="nav-logo-badge">WF</div>
+                    <div>
+                        Walsumer Fliesenleger<br />
+                        <span style="font-weight:400;font-size:0.8rem;color:var(--muted)">Fliesen • Bäder • Böden</span>
+                    </div>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html">Start</a>
+                    <a href="leistungen.html" class="active">Leistungen</a>
+                    <a href="referenzen.html">Referenzen</a>
+                    <a href="ablauf.html">Ablauf</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </nav>
+                <div class="nav-contact">
+                    <span>☎ 0203 98593508</span>
+                    <button class="btn-primary" onclick="window.location.href='kontakt.html'">
+                        Angebot anfragen
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-section">
+                <div class="section-header">
+                    <h1>Bad &amp; WC</h1>
+                    <p>
+                        Moderne Bäder, bodengleiche Duschen und funktionale Gäste-WCs – hier ein paar Beispiele.
+                    </p>
+                </div>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <img src="img/bad1.jpg" alt="Modernes Familienbad mit bodengleicher Dusche">
+                        <h3>Familienbad in Duisburg</h3>
+                        <p>Großformatige Wandfliesen, Nische in der Dusche, rutschhemmender Bodenbelag.</p>
+                    </article>
+
+                    <article class="card">
+                        <img src="img/bad2.jpg" alt="Kleines Gästebad">
+                        <h3>Gästebad auf kleinem Raum</h3>
+                        <p>Helle Fliesen lassen den Raum größer wirken, pflegeleichte Oberflächen.</p>
+                    </article>
+
+                    <article class="card">
+                        <img src="img/bad3.jpg" alt="Duschbereich mit Mosaik">
+                        <h3>Duschbereich mit Mosaik</h3>
+                        <p>Akzentwand aus Mosaik, passend zu Boden- und Wandfliesen kombiniert.</p>
+                    </article>
+                </div>
+
+                <p style="margin-top:18px;font-size:0.9rem;color:var(--muted);">
+                    Weitere Bad-Referenzen zeigen wir Ihnen gerne bei einem persönlichen Termin.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-inner">
+                <div>
+                    &copy; <span id="year"></span> Walsumer Fliesenleger – Alle Rechte vorbehalten.
+                </div>
+                <div class="footer-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

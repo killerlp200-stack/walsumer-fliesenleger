@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Walsumer Fliesenleger – Wohnräume & Flure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <div class="nav">
+                <div class="nav-logo">
+                    <div class="nav-logo-badge">WF</div>
+                    <div>
+                        Walsumer Fliesenleger<br />
+                        <span style="font-weight:400;font-size:0.8rem;color:var(--muted)">Fliesen • Bäder • Böden</span>
+                    </div>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html">Start</a>
+                    <a href="leistungen.html" class="active">Leistungen</a>
+                    <a href="referenzen.html">Referenzen</a>
+                    <a href="ablauf.html">Ablauf</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </nav>
+                <div class="nav-contact">
+                    <span>☎ 0203 98593508</span>
+                    <button class="btn-primary" onclick="window.location.href='kontakt.html'">
+                        Angebot anfragen
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-section">
+                <div class="section-header">
+                    <h1>Wohnräume &amp; Flure</h1>
+                    <p>
+                        Langlebige Bodenbeläge für Bereiche, in denen täglich gelebt, gelaufen und gearbeitet wird.
+                    </p>
+                </div>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <img src="img/wohnraum1.jpg" alt="Wohnzimmer mit Fliesenboden">
+                        <h3>Wohnzimmer mit Fliesenboden</h3>
+                        <p>Großformatige Fliesen, warm wirkende Optik, pflegeleichte Oberflächen.</p>
+                    </article>
+
+                    <article class="card">
+                        <img src="img/flur1.jpg" alt="Flur mit robustem Bodenbelag">
+                        <h3>Flur mit hoher Belastung</h3>
+                        <p>Rutschhemmende Fliesen, geeignet für Familien und Haustiere.</p>
+                    </article>
+
+                    <article class="card">
+                        <img src="img/wohnraum2.jpg" alt="Offener Wohn-Essbereich">
+                        <h3>Offener Wohn-Essbereich</h3>
+                        <p>Einheitlicher Boden für einen ruhigen Gesamteindruck.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-inner">
+                <div>
+                    &copy; <span id="year"></span> Walsumer Fliesenleger – Alle Rechte vorbehalten.
+                </div>
+                <div class="footer-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
