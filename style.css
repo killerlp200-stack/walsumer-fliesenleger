@@ -351,6 +351,14 @@ footer {
     gap: 10px;
 }
 
+.footer-info {
+    max-width: 380px;
+}
+
+.footer-copy {
+    margin-top: 6px;
+}
+
 .footer-links {
     display: flex;
     gap: 16px;
@@ -363,29 +371,36 @@ footer {
     text-underline-offset: 3px;
 }
 
-/* Responsiv */
+/* Social Icons im Footer */
 
-@media (max-width: 900px) {
-    .hero {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .hero-side {
-        order: -1;
-    }
+/* Social Media Icons */
+.footer-social {
+    margin-top: 10px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
 }
 
-@media (max-width: 640px) {
-    .nav {
-        flex-wrap: wrap;
-    }
+.social-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: var(--muted);
+    transition: 0.25s ease;
+}
 
-    .nav-links {
-        width: 100%;
-        justify-content: center;
-    }
+.social-icon:hover svg {
+    fill: var(--primary-dark);
+    transform: scale(1.12);
+}
 
-    section.page-section {
-        padding-inline: 16px;
-    }
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.card-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
 }
