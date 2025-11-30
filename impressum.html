@@ -27,7 +27,7 @@
                     <a href="kontakt.html">Kontakt</a>
                 </nav>
                 <div class="nav-contact">
-                    <span>☎ 01234 / 567890</span>
+                    <span>☎ 0203 98593508</span>
                     <button class="btn-primary" onclick="window.location.href='kontakt.html'">
                         Angebot anfragen
                     </button>
@@ -40,28 +40,24 @@
                 <div class="section-header">
                     <h1>Impressum</h1>
                     <p>
-                        Angaben gemäß § 5 TMG. Bitte alle Platzhalter durch Ihre tatsächlichen Daten ersetzen.
+                        Angaben gemäß § 5 TMG.
                     </p>
                 </div>
 
                 <article class="card">
                     <h2>Dienstanbieter</h2>
                     <p>
-                        <strong>Walsumer Fliesenleger</strong><br>
-                        Inhaber: <strong>Max Mustermann</strong><br>
-                        Musterstraße 12<br>
-                        47179 Duisburg-Walsum<br>
+                        <strong>Walsumer Fliesenleger – A. Polat</strong><br>
+                        Inhaber: A. Polat<br>
+                        Bommanshof 20<br>
+                        47178 Duisburg<br>
                         Deutschland
                     </p>
 
                     <p>
-                        Telefon: 01234 / 567890<br>
-                        E-Mail: info@walsumerfliesenleger.de
-                    </p>
-
-                    <p style="font-size:0.85rem;color:var(--muted);">
-                        Hinweis: Bitte Namen, Anschrift, Telefonnummer und E-Mail-Adresse durch Ihre echten
-                        Kontaktdaten ersetzen.
+                        Festnetz: 0203 98593508<br>
+                        Mobil: 0162 9594937<br>
+                        E-Mail: <a href="mailto:walsumerfliesenleger@web.de">walsumerfliesenleger@web.de</a>
                     </p>
                 </article>
 
@@ -73,8 +69,8 @@
                         Registereintrag: Handwerksrolle / Betriebsnummer &lt;falls vorhanden eintragen&gt;
                     </p>
                     <p style="font-size:0.85rem;color:var(--muted);">
-                        Hinweis: Falls Sie in die Handwerksrolle eingetragen sind, die Daten bitte passend ergänzen.
-                        Wenn nicht zutreffend, diesen Abschnitt anpassen oder entfernen.
+                        Hinweis: Bitte die Angaben zur Handwerkskammer / Handwerksrolle ergänzen oder diesen Abschnitt
+                        anpassen, falls nicht zutreffend.
                     </p>
                 </article>
 
@@ -82,11 +78,10 @@
                     <h2>Umsatzsteuer</h2>
                     <p>
                         Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz (UStG):<br>
-                        <em>DE&nbsp;123456789</em> (Platzhalter)
+                        <em>DE&nbsp;XXXXXXXXX</em> (Platzhalter)
                     </p>
                     <p>
-                        Sind Sie als Kleinunternehmer nach § 19 UStG tätig und haben keine USt-ID, können Sie
-                        hier einen entsprechenden Hinweis ergänzen, z. B.:<br>
+                        Alternativ, falls Sie Kleinunternehmer nach § 19 UStG sind, können Sie hier ergänzen:<br>
                         <em>„Kleinunternehmer gemäß § 19 UStG – es wird keine Umsatzsteuer berechnet.“</em>
                     </p>
                 </article>
@@ -147,4 +142,37 @@
         </main>
 
         <footer>
-            <div class="footer-inn
+            <div class="footer-inner">
+                <div class="footer-info">
+                    <strong>Walsumer Fliesenleger – A. Polat</strong><br>
+                    Bommanshof 20 • 47178 Duisburg<br>
+                    Festnetz: 0203 98593508 • Mobil: 0162 9594937<br>
+                    E-Mail: <a href="mailto:walsumerfliesenleger@web.de">walsumerfliesenleger@web.de</a>
+                    <div class="footer-social">
+                        <!-- Instagram (optional, kannst du lassen oder später anpassen) -->
+                        <a href="https://www.instagram.com/walsumerfliesenleger" target="_blank" aria-label="Instagram"
+                            class="social-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm6.5-.5a1.5 1.5 0 11-3 .001 1.5 1.5 0 013-.001z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer-copy">
+                        &copy; <span id="year"></span> Walsumer Fliesenleger – Alle Rechte vorbehalten.
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
