@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Walsumer Fliesenleger – Rezensionen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <div class="nav">
+                <div class="nav-logo">
+                    <div class="nav-logo-badge">WF</div>
+                    <div>
+                        Walsumer Fliesenleger<br />
+                        <span style="font-weight:400;font-size:0.8rem;color:var(--muted)">Fliesen • Bäder • Böden</span>
+                    </div>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html">Start</a>
+                    <a href="leistungen.html">Leistungen</a>
+                    <a href="referenzen.html">Referenzen</a>
+                    <a href="ablauf.html">Ablauf</a>
+                    <a href="rezension.html" class="active">Rezensionen</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </nav>
+                <div class="nav-contact">
+                    <span>☎ 0203 98593508</span>
+                    <button class="btn-primary" onclick="window.location.href='kontakt.html'">
+                        Angebot anfragen
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-section">
+                <div class="section-header">
+                    <h1>Rezensionen & Kundenstimmen</h1>
+                    <p>
+                        Rückmeldungen zufriedener Kundinnen und Kunden aus Duisburg, Dinslaken
+                        und Umgebung.
+                    </p>
+                </div>
+
+                <div id="static-reviews" class="card-grid">
+                    <article class="card">
+                        <h3>„Alles aus einer Hand“</h3>
+                        <p>Komplettes Familienbad, sauber gearbeitet, Termine eingehalten.</p>
+                        <p class="review-meta">★★★★★ – Familie K., Duisburg-Walsum</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>„Super Beratung“</h3>
+                        <p>Tolle Unterstützung bei der Fliesenauswahl.</p>
+                        <p class="review-meta">★★★★★ – M. S., Dinslaken</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>„Baustelle immer ordentlich“</h3>
+                        <p>Jeden Abend aufgeräumt, sehr angenehme Zusammenarbeit.</p>
+                        <p class="review-meta">★★★★★ – H. T., Duisburg</p>
+                    </article>
+
+                    <!-- Du kannst hier so viele hinzufügen wie du willst (20-40 Stück) -->
+                </div>
+            </section>
+
+            <section class="page-section" style="background:rgba(255,255,255,0.4);">
+                <div class="section-header">
+                    <h2>Eigene Bewertung abgeben</h2>
+                    <p>
+                        Wenn Sie zufrieden waren, freuen wir uns über eine kurze Bewertung.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <form id="review-form">
+                        <div
+                            style="display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-bottom:10px;">
+                            <div>
+                                <label for="name" style="font-size:0.85rem;">Name (oder Initialen)</label><br>
+                                <input id="name" type="text" required
+                                    style="width:100%;padding:6px;border-radius:8px;border:1px solid #ccc;">
+                            </div>
+
+                            <div>
+                                <label for="ort" style="font-size:0.85rem;">Ort (optional)</label><br>
+                                <input id="ort" type="text"
+                                    style="width:100%;padding:6px;border-radius:8px;border:1px solid #ccc;">
+                            </div>
+
+                            <div>
+                                <label for="sterne" style="font-size:0.85rem;">Bewertung</label><br>
+                                <select id="sterne"
+                                    style="width:100%;padding:6px;border-radius:8px;border:1px solid #ccc;">
+                                    <option value="5">★★★★★</option>
+                                    <option value="4">★★★★☆</option>
+                                    <option value="3">★★★☆☆</option>
+                                    <option value="2">★★☆☆☆</option>
+                                    <option value="1">★☆☆☆☆</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom:10px;">
+                            <label for="text" style="font-size:0.85rem;">Ihre Bewertung</label><br>
+                            <textarea id="text" rows="4" required
+                                style="width:100%;padding:8px;border-radius:8px;border:1px solid #ccc;"></textarea>
+                        </div>
+
+                        <p style="font-size:0.8rem;color:var(--muted);margin-bottom:10px;">
+                            Hinweis: Bewertungen werden lokal in Ihrem Browser gespeichert.
+                        </p>
+
+                        <button class="btn-primary" type="submit">
+                            Bewertung hinzufügen
+                        </button>
+                    </form>
+                </div>
+
+                <div id="user-reviews-wrapper" style="margin-top:18px;display:none;">
+                    <h3 style="margin-bottom:10px;">Ihre abgegebenen Bewertungen</h3>
+                    <div id="user-reviews" class="card-grid"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-inner">
+                <div>
+                    © <span id="year"></span> Walsumer Fliesenleger – Alle Rechte vorbehalten.
+                </div>
+                <div class="footer-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        const form = document.getElementById('review-form');
+        const container = document.getElementById('user-reviews');
+        const wrapper = document.getElementById('user-reviews-wrapper');
+        const KEY = 'wf-bewertungen';
+
+        function card(r) {
+            const el = document.createElement('article');
+            el.className = 'card';
+
+            el.innerHTML = `
+            <h3>„${r.kurz}“</h3>
+            <p>${r.text}</p>
+            <p class="review-meta">${r.sterne} – ${r.name}${r.ort ? ', ' + r.ort : ''}</p>
+        `;
+            return el;
+        }
+
+        function load() {
+            const data = localStorage.getItem(KEY);
+            if (!data) return;
+            const list = JSON.parse(data);
+            if (list.length === 0) return;
+
+            wrapper.style.display = "block";
+            list.forEach(r => container.appendChild(card(r)));
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const ort = document.getElementById('ort').value.trim();
+            const text = document.getElementById('text').value.trim();
+            const ster = document.getElementById('sterne').value;
+
+            const kurz = text.length > 40 ? text.slice(0, 37) + "..." : text;
+            const sterne = "★".repeat(ster) + "☆".repeat(5 - ster);
+
+            const r = { name, ort, text, kurz, sterne };
+
+            wrapper.style.display = "block";
+            container.prepend(card(r));
+
+            let list = [];
+            const old = localStorage.getItem(KEY);
+            if (old) list = JSON.parse(old);
+            list.unshift(r);
+            localStorage.setItem(KEY, JSON.stringify(list));
+
+            form.reset();
+        });
+
+        load();
+    </script>
+
+</body>
+
+</html>
