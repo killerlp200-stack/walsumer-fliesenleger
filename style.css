@@ -1,12 +1,8 @@
 :root {
-    --primary: #1a8f4a;
-    /* Hauptgrün */
-    --primary-dark: #0f6131;
-    /* Dunkleres Grün */
-    --accent: #a5d6a7;
-    /* Hellgrün / Akzent */
-    --bg: #c8ebd2;
-    /* Hintergrund */
+    --primary: #1a8f4a;       /* Hauptgrün */
+    --primary-dark: #0f6131;  /* Dunkleres Grün */
+    --accent: #a5d6a7;        /* Hellgrün / Akzent */
+    --bg: #c8ebd2;            /* Hintergrund */
     --text: #222;
     --muted: #666;
     --radius: 14px;
@@ -257,7 +253,6 @@ section.page-section {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    align-items: center;
 }
 
 .hero-note {
@@ -297,6 +292,18 @@ section.page-section {
     margin: 0;
     font-size: 0.9rem;
     color: var(--muted);
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.card-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
 }
 
 /* einfache Listen */
@@ -371,9 +378,8 @@ footer {
     text-underline-offset: 3px;
 }
 
-/* Social Icons im Footer */
-
 /* Social Media Icons */
+
 .footer-social {
     margin-top: 10px;
     display: flex;
@@ -393,14 +399,17 @@ footer {
     transform: scale(1.12);
 }
 
-.card-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.12s ease, box-shadow 0.12s ease;
+/* ⭐ Rezensionen */
+
+.review-meta {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-style: italic;
 }
 
-.card-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+/* Optional: Rezensionen etwas größer machen */
+#static-reviews .card,
+#user-reviews .card {
+    padding: 18px 18px 14px;
 }
