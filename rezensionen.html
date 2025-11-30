@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 
 <head>
@@ -10,23 +10,26 @@
 
 <body>
     <div class="page">
-        <header>    
+        <header>
             <div class="nav">
                 <div class="nav-logo">
                     <div class="nav-logo-badge">WF</div>
                     <div>
                         Walsumer Fliesenleger<br />
-                        <span style="font-weight:400;font-size:0.8rem;color:var(--muted)">Fliesen • Bäder • Böden</span>
+                        <span style="font-weight:400;font-size:0.8rem;color:var(--muted)">
+                            Fliesen • Bäder • Böden
+                        </span>
                     </div>
                 </div>
+
                 <nav class="nav-links">
-    <a href="index.html">Start</a>
-    <a href="leistungen.html">Leistungen</a>
-    <a href="referenzen.html">Referenzen</a>
-    <a href="ablauf.html">Ablauf</a>
-    <a href="rezension.html" class="active">Rezensionen</a>
-    <a href="kontakt.html">Kontakt</a>
-</nav>
+                    <a href="index.html">Start</a>
+                    <a href="leistungen.html">Leistungen</a>
+                    <a href="referenzen.html">Referenzen</a>
+                    <a href="ablauf.html">Ablauf</a>
+                    <a href="rezension.html" class="active">Rezensionen</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </nav>
 
                 <div class="nav-contact">
                     <span>☎ 0203 98593508</span>
@@ -38,9 +41,10 @@
         </header>
 
         <main>
+            <!-- Feste (statische) Bewertungen -->
             <section class="page-section">
                 <div class="section-header">
-                    <h1>Rezensionen & Kundenstimmen</h1>
+                    <h1>Rezensionen &amp; Kundenstimmen</h1>
                     <p>
                         Rückmeldungen zufriedener Kundinnen und Kunden aus Duisburg, Dinslaken
                         und Umgebung.
@@ -66,10 +70,11 @@
                         <p class="review-meta">★★★★★ – H. T., Duisburg</p>
                     </article>
 
-                    <!-- Du kannst hier so viele hinzufügen wie du willst (20-40 Stück) -->
+                    <!-- Hier kannst du beliebig viele weitere feste Bewertungen ergänzen -->
                 </div>
             </section>
 
+            <!-- Formular für eigene Bewertungen -->
             <section class="page-section" style="background:rgba(255,255,255,0.4);">
                 <div class="section-header">
                     <h2>Eigene Bewertung abgeben</h2>
@@ -114,7 +119,8 @@
                         </div>
 
                         <p style="font-size:0.8rem;color:var(--muted);margin-bottom:10px;">
-                            Hinweis: Bewertungen werden lokal in Ihrem Browser gespeichert.
+                            Hinweis: Bewertungen werden lokal in Ihrem Browser gespeichert (localStorage) und nicht an
+                            den Server übertragen.
                         </p>
 
                         <button class="btn-primary" type="submit">
@@ -133,7 +139,7 @@
         <footer>
             <div class="footer-inner">
                 <div>
-                    © <span id="year"></span> Walsumer Fliesenleger – Alle Rechte vorbehalten.
+                    &copy; <span id="year"></span> Walsumer Fliesenleger – Alle Rechte vorbehalten.
                 </div>
                 <div class="footer-links">
                     <a href="impressum.html">Impressum</a>
@@ -144,6 +150,7 @@
     </div>
 
     <script>
+        // Jahreszahl im Footer setzen
         document.getElementById("year").textContent = new Date().getFullYear();
 
         const form = document.getElementById('review-form');
@@ -156,10 +163,10 @@
             el.className = 'card';
 
             el.innerHTML = `
-            <h3>„${r.kurz}“</h3>
-            <p>${r.text}</p>
-            <p class="review-meta">${r.sterne} – ${r.name}${r.ort ? ', ' + r.ort : ''}</p>
-        `;
+                <h3>„${r.kurz}“</h3>
+                <p>${r.text}</p>
+                <p class="review-meta">${r.sterne} – ${r.name}${r.ort ? ', ' + r.ort : ''}</p>
+            `;
             return el;
         }
 
@@ -180,6 +187,10 @@
             const ort = document.getElementById('ort').value.trim();
             const text = document.getElementById('text').value.trim();
             const ster = document.getElementById('sterne').value;
+
+            if (!name || !text) {
+                return;
+            }
 
             const kurz = text.length > 40 ? text.slice(0, 37) + "..." : text;
             const sterne = "★".repeat(ster) + "☆".repeat(5 - ster);
