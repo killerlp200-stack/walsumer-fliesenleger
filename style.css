@@ -1,8 +1,8 @@
 :root {
-    --primary: #1a8f4a;       /* Hauptgrün */
-    --primary-dark: #0f6131;  /* Dunkleres Grün */
-    --accent: #a5d6a7;        /* Hellgrün / Akzent */
-    --bg: #c8ebd2;            /* Hintergrund */
+    --primary: #1a8f4a;          /* Hauptgrün */
+    --primary-dark: #0f6131;     /* Dunkleres Grün */
+    --accent: #a5d6a7;           /* Hellgrün / Akzent */
+    --bg: #c8ebd2;               /* Hintergrund */
     --text: #222;
     --muted: #666;
     --radius: 14px;
@@ -85,6 +85,7 @@ header {
     flex-wrap: wrap;
     gap: 16px;
     font-size: 0.95rem;
+    justify-content: center;
 }
 
 .nav-links a {
@@ -253,6 +254,7 @@ section.page-section {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+    align-items: center;
 }
 
 .hero-note {
@@ -294,18 +296,6 @@ section.page-section {
     color: var(--muted);
 }
 
-.card-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.12s ease, box-shadow 0.12s ease;
-}
-
-.card-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
-}
-
 /* einfache Listen */
 
 ul.clean {
@@ -321,6 +311,15 @@ ul.clean li::before {
     display: inline-block;
     width: 1em;
     margin-left: 0;
+}
+
+/* kleine Meta-Zeilen bei Rezensionen */
+
+.review-meta {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
 }
 
 /* Kontaktbox */
@@ -379,7 +378,6 @@ footer {
 }
 
 /* Social Media Icons */
-
 .footer-social {
     margin-top: 10px;
     display: flex;
@@ -399,17 +397,108 @@ footer {
     transform: scale(1.12);
 }
 
-/* ⭐ Rezensionen */
+/* Klickbare Karten (Leistungen) */
 
-.review-meta {
-    margin-top: 8px;
-    font-size: 0.8rem;
-    color: var(--muted);
-    font-style: italic;
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
-/* Optional: Rezensionen etwas größer machen */
-#static-reviews .card,
-#user-reviews .card {
-    padding: 18px 18px 14px;
+.card-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================= */
+/*        MOBILE ANPASSUNGEN     */
+/* ============================= */
+
+/* Tablets & kleine Laptops */
+@media (max-width: 900px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .nav-contact {
+        align-self: stretch;
+        justify-content: space-between;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 18px;
+    }
+
+    .hero-side {
+        order: 2;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 600px) {
+
+    header {
+        position: static; /* Sticky kann auf Handy manchmal nerven */
+    }
+
+    .nav {
+        padding: 10px 14px;
+        gap: 6px;
+    }
+
+    .nav-logo {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+        row-gap: 4px;
+        column-gap: 12px;
+        font-size: 0.9rem;
+    }
+
+    .nav-contact span {
+        display: none; /* Nur Button auf sehr kleinen Bildschirmen */
+    }
+
+    .nav-contact {
+        align-self: stretch;
+        justify-content: flex-end;
+    }
+
+    section.page-section {
+        padding: 20px 14px 24px;
+    }
+
+    .hero {
+        margin: 10px auto 0;
+        padding: 18px 14px 6px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-sub {
+        font-size: 0.9rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 14px 14px 18px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
 }
