@@ -22,15 +22,15 @@
                     </div>
                 </div>
 
+                <!-- Navigation – einheitlich auf ALLEN Seiten! -->
                 <nav class="nav-links">
-    <a href="index.html">Start</a>
-    <a href="leistungen.html">Leistungen</a>
-    <a href="referenzen.html">Referenzen</a>
-    <a href="ablauf.html">Ablauf</a>
-    <a href="rezension.html" class="active">Rezensionen</a>
-    <a href="kontakt.html">Kontakt</a>
-</nav>
-
+                    <a href="index.html">Start</a>
+                    <a href="leistungen.html">Leistungen</a>
+                    <a href="referenzen.html">Referenzen</a>
+                    <a href="ablauf.html">Ablauf</a>
+                    <a href="rezension.html" class="active">Rezensionen</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </nav>
 
                 <div class="nav-contact">
                     <span>☎ 0203 98593508</span>
@@ -42,10 +42,11 @@
         </header>
 
         <main>
-            <!-- Feste (statische) Bewertungen -->
+
+            <!-- Statische Bewertungen -->
             <section class="page-section">
                 <div class="section-header">
-                    <h1>Rezensionen &amp; Kundenstimmen</h1>
+                    <h1>Rezensionen & Kundenstimmen</h1>
                     <p>
                         Rückmeldungen zufriedener Kundinnen und Kunden aus Duisburg, Dinslaken
                         und Umgebung.
@@ -70,12 +71,10 @@
                         <p>Jeden Abend aufgeräumt, sehr angenehme Zusammenarbeit.</p>
                         <p class="review-meta">★★★★★ – H. T., Duisburg</p>
                     </article>
-
-                    <!-- Hier kannst du beliebig viele weitere feste Bewertungen ergänzen -->
                 </div>
             </section>
 
-            <!-- Formular für eigene Bewertungen -->
+            <!-- Eigenes Bewertungsformular -->
             <section class="page-section" style="background:rgba(255,255,255,0.4);">
                 <div class="section-header">
                     <h2>Eigene Bewertung abgeben</h2>
@@ -120,8 +119,7 @@
                         </div>
 
                         <p style="font-size:0.8rem;color:var(--muted);margin-bottom:10px;">
-                            Hinweis: Bewertungen werden lokal in Ihrem Browser gespeichert (localStorage) und nicht an
-                            den Server übertragen.
+                            Hinweis: Bewertungen werden lokal in Ihrem Browser gespeichert.
                         </p>
 
                         <button class="btn-primary" type="submit">
@@ -135,12 +133,13 @@
                     <div id="user-reviews" class="card-grid"></div>
                 </div>
             </section>
+
         </main>
 
         <footer>
             <div class="footer-inner">
                 <div>
-                    &copy; <span id="year"></span> Walsumer Fliesenleger – Alle Rechte vorbehalten.
+                    © <span id="year"></span> Walsumer Fliesenleger – Alle Rechte vorbehalten.
                 </div>
                 <div class="footer-links">
                     <a href="impressum.html">Impressum</a>
@@ -151,7 +150,6 @@
     </div>
 
     <script>
-        // Jahreszahl im Footer setzen
         document.getElementById("year").textContent = new Date().getFullYear();
 
         const form = document.getElementById('review-form');
@@ -188,10 +186,6 @@
             const ort = document.getElementById('ort').value.trim();
             const text = document.getElementById('text').value.trim();
             const ster = document.getElementById('sterne').value;
-
-            if (!name || !text) {
-                return;
-            }
 
             const kurz = text.length > 40 ? text.slice(0, 37) + "..." : text;
             const sterne = "★".repeat(ster) + "☆".repeat(5 - ster);
