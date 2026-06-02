@@ -4,39 +4,26 @@
 <head>
     <meta charset="UTF-8" />
     <title>Rezensionen | Walsumer Fliesenleger Duisburg</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta name="description"
         content="Kundenbewertungen und Erfahrungen mit Walsumer Fliesenleger aus Duisburg-Walsum. Rezensionen zu Badezimmern, Küchen, Terrassen und Fliesenarbeiten.">
-
     <meta name="robots" content="index, follow">
-
     <link rel="canonical" href="https://walsumerfliesenleger.de/rezensionen.html">
-
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
     <div class="page">
-
         <header>
-
             <div class="nav">
-
                 <div class="nav-logo">
-
                     <div class="nav-logo-badge">WF</div>
-
                     <div>
                         Walsumer Fliesenleger<br />
-
                         <span style="font-weight:400;font-size:0.8rem;color:var(--muted)">
                             Fliesen • Bäder • Böden
                         </span>
                     </div>
-
                 </div>
 
                 <nav class="nav-links">
@@ -49,397 +36,145 @@
                 </nav>
 
                 <div class="nav-contact">
-
                     <span>☎ 0203 98593508</span>
-
-                    <button class="btn-primary"
-                        onclick="window.location.href='kontakt.html'">
+                    <button class="btn-primary" onclick="window.location.href='kontakt.html'">
                         Angebot anfragen
                     </button>
-
                 </div>
-
             </div>
-
         </header>
 
         <main>
-
             <section class="page-section">
-
                 <div class="section-header">
-
                     <h1>Rezensionen & Kundenbewertungen</h1>
-
                     <p>
                         Viele unserer Projekte entstehen über Empfehlungen zufriedener
                         Kundinnen und Kunden aus Duisburg-Walsum, Dinslaken und Umgebung.
                     </p>
-
                 </div>
 
-                <div id="static-reviews" class="card-grid">
-
+                <div class="card-grid">
                     <article class="card">
-
                         <h3>„Alles aus einer Hand“</h3>
-
                         <p>
                             Komplettes Familienbad sauber umgesetzt,
                             Termine eingehalten und sehr ordentliche Arbeit.
                         </p>
-
                         <p class="review-meta">
                             ★★★★★ – Familie K., Duisburg-Walsum
                         </p>
-
                     </article>
 
                     <article class="card">
-
                         <h3>„Super Beratung“</h3>
-
                         <p>
                             Tolle Unterstützung bei der Fliesenauswahl
                             und sehr saubere Verarbeitung.
                         </p>
-
                         <p class="review-meta">
                             ★★★★★ – M. S., Dinslaken
                         </p>
-
                     </article>
 
                     <article class="card">
-
                         <h3>„Baustelle immer ordentlich“</h3>
-
                         <p>
                             Sehr angenehme Zusammenarbeit,
                             jeden Abend sauber hinterlassen.
                         </p>
-
                         <p class="review-meta">
                             ★★★★★ – H. T., Duisburg
                         </p>
-
                     </article>
-
                 </div>
-
             </section>
 
-            <section class="page-section"
-                style="background:rgba(255,255,255,0.4);">
-
+            <section class="page-section">
                 <div class="section-header">
-
-                    <h2>Eigene Bewertung abgeben</h2>
-
+                    <h2>Bewertung abgeben</h2>
                     <p>
-                        Wenn Sie zufrieden mit unserer Arbeit waren,
-                        freuen wir uns über eine kurze Bewertung.
+                        Wenn Sie zufrieden mit unserer Arbeit waren, freuen wir uns über eine kurze Bewertung
+                        auf Google oder eine persönliche Rückmeldung.
                     </p>
-
                 </div>
 
-                <div class="card">
-
-                    <form id="review-form">
-
-                        <div style="
-                            display:grid;
-                            gap:10px;
-                            grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-                            margin-bottom:10px;">
-
-                            <div>
-
-                                <label for="name"
-                                    style="font-size:0.85rem;">
-                                    Name oder Initialen
-                                </label><br>
-
-                                <input id="name"
-                                    type="text"
-                                    required
-                                    style="
-                                        width:100%;
-                                        padding:8px;
-                                        border-radius:8px;
-                                        border:1px solid #ccc;">
-
-                            </div>
-
-                            <div>
-
-                                <label for="ort"
-                                    style="font-size:0.85rem;">
-                                    Ort (optional)
-                                </label><br>
-
-                                <input id="ort"
-                                    type="text"
-                                    style="
-                                        width:100%;
-                                        padding:8px;
-                                        border-radius:8px;
-                                        border:1px solid #ccc;">
-
-                            </div>
-
-                            <div>
-
-                                <label for="sterne"
-                                    style="font-size:0.85rem;">
-                                    Bewertung
-                                </label><br>
-
-                                <select id="sterne"
-                                    style="
-                                        width:100%;
-                                        padding:8px;
-                                        border-radius:8px;
-                                        border:1px solid #ccc;">
-
-                                    <option value="5">★★★★★</option>
-                                    <option value="4">★★★★☆</option>
-                                    <option value="3">★★★☆☆</option>
-                                    <option value="2">★★☆☆☆</option>
-                                    <option value="1">★☆☆☆☆</option>
-
-                                </select>
-
-                            </div>
-
-                        </div>
-
-                        <div style="margin-bottom:10px;">
-
-                            <label for="text"
-                                style="font-size:0.85rem;">
-                                Ihre Bewertung
-                            </label><br>
-
-                            <textarea id="text"
-                                rows="4"
-                                required
-                                style="
-                                    width:100%;
-                                    padding:8px;
-                                    border-radius:8px;
-                                    border:1px solid #ccc;"></textarea>
-
-                        </div>
-
-                        <p style="
-                            font-size:0.8rem;
-                            color:var(--muted);
-                            margin-bottom:10px;">
-
-                            Hinweis:
-                            Bewertungen werden lokal im Browser gespeichert.
-
-                        </p>
-
-                        <button class="btn-primary" type="submit">
-                            Bewertung hinzufügen
-                        </button>
-
-                    </form>
-
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="window.location.href='kontakt.html'">
+                        Bewertung anfragen
+                    </button>
+                    <button class="btn-secondary" onclick="window.location.href='https://wa.me/491629594937'">
+                        Per WhatsApp schreiben
+                    </button>
                 </div>
-
-                <div id="user-reviews-wrapper"
-                    style="margin-top:18px;display:none;">
-
-                    <h3 style="margin-bottom:10px;">
-                        Ihre abgegebenen Bewertungen
-                    </h3>
-
-                    <div id="user-reviews"
-                        class="card-grid"></div>
-
-                </div>
-
             </section>
-
         </main>
 
         <footer>
-
             <div class="footer-inner">
-
                 <div class="footer-info">
-
-                    <strong>
-                        Walsumer Fliesenleger – A. Polat
-                    </strong><br>
-
+                    <strong>Walsumer Fliesenleger – A. Polat</strong><br>
                     Bommannshof 20 • 47178 Duisburg<br>
 
-                    Festnetz: 0203 98593508<br>
+                    Festnetz:
+                    <a href="tel:+4920398593508">0203 98593508</a><br>
 
-                    Mobil / WhatsApp: 0162 9594937<br>
+                    Mobil / WhatsApp:
+                    <a href="tel:+491629594937">0162 9594937</a><br>
 
                     E-Mail:
-                    <a href="mailto:walsumerfliesenleger@web.de">
+                    <a href="mailto:walsumerfliesenleger@web.de" aria-label="E-Mail schreiben">
                         walsumerfliesenleger@web.de
                     </a>
 
                     <div class="footer-social">
-    <a href="https://www.instagram.com/walsumerfliesenleger"
-       target="_blank"
-       aria-label="Instagram"
-       class="social-icon">
-        <svg viewBox="0 0 24 24">
-            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm6.5-.5a1.5 1.5 0 11-3 .001 1.5 1.5 0 013-.001z" />
-        </svg>
-    </a>
+                        <a href="https://www.instagram.com/walsumerfliesenleger"
+                            target="_blank"
+                            aria-label="Instagram"
+                            class="social-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm6.5-.5a1.5 1.5 0 11-3 .001 1.5 1.5 0 013-.001z" />
+                            </svg>
+                        </a>
 
-    <a href="https://www.facebook.com/profile.php?id=61584457142333&locale=de_DE"
-       target="_blank"
-       aria-label="Facebook"
-       class="social-icon">
-        <svg viewBox="0 0 24 24">
-            <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
-        </svg>
-    </a>
-</div>
-
-                    <div class="footer-copy">
-
-                        &copy; <span id="year"></span>
-                        Walsumer Fliesenleger –
-                        Alle Rechte vorbehalten.
-
+                        <a href="https://www.facebook.com/profile.php?id=61584457142333&locale=de_DE"
+                            target="_blank"
+                            aria-label="Facebook"
+                            class="social-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+                            </svg>
+                        </a>
                     </div>
 
+                    <div class="footer-copy">
+                        &copy; <span id="year"></span> Walsumer Fliesenleger – Alle Rechte vorbehalten.
+                    </div>
                 </div>
 
                 <div class="footer-links">
                     <a href="impressum.html">Impressum</a>
                     <a href="datenschutz.html">Datenschutz</a>
                 </div>
-
             </div>
-
         </footer>
-
     </div>
 
+    <a href="https://wa.me/491629594937"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="WhatsApp Kontakt">
+        <svg viewBox="0 0 32 32">
+            <path fill="white"
+                d="M19.11 17.21c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.33-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.15-.64-1.55-.88-2.13-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-.99 2.43 0 1.43 1.02 2.81 1.16 3 .14.19 2.01 3.07 4.88 4.3.68.29 1.21.46 1.63.59.68.22 1.3.19 1.79.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.25.17-1.36-.07-.12-.26-.19-.55-.33z" />
+        </svg>
+    </a>
+
     <script>
-
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
-
-        const form = document.getElementById('review-form');
-        const container = document.getElementById('user-reviews');
-        const wrapper = document.getElementById('user-reviews-wrapper');
-
-        const KEY = 'wf-bewertungen';
-
-        function createCard(review) {
-
-            const element = document.createElement('article');
-
-            element.className = 'card';
-
-            element.innerHTML = `
-                <h3>„${review.kurz}“</h3>
-                <p>${review.text}</p>
-                <p class="review-meta">
-                    ${review.sterne} – ${review.name}${review.ort ? ', ' + review.ort : ''}
-                </p>
-            `;
-
-            return element;
-        }
-
-        function loadReviews() {
-
-            const data = localStorage.getItem(KEY);
-
-            if (!data) return;
-
-            const reviews = JSON.parse(data);
-
-            if (reviews.length === 0) return;
-
-            wrapper.style.display = "block";
-
-            reviews.forEach(review => {
-                container.appendChild(createCard(review));
-            });
-
-        }
-
-        form.addEventListener('submit', (event) => {
-
-            event.preventDefault();
-
-            const name =
-                document.getElementById('name').value.trim();
-
-            const ort =
-                document.getElementById('ort').value.trim();
-
-            const text =
-                document.getElementById('text').value.trim();
-
-            const ster =
-                document.getElementById('sterne').value;
-
-            const kurz =
-                text.length > 40
-                ? text.slice(0, 37) + "..."
-                : text;
-
-            const sterne =
-                "★".repeat(ster)
-                + "☆".repeat(5 - ster);
-
-            const review = {
-                name,
-                ort,
-                text,
-                kurz,
-                sterne
-            };
-
-            wrapper.style.display = "block";
-
-            container.prepend(createCard(review));
-
-            let list = [];
-
-            const old =
-                localStorage.getItem(KEY);
-
-            if (old)
-                list = JSON.parse(old);
-
-            list.unshift(review);
-
-            localStorage.setItem(
-                KEY,
-                JSON.stringify(list)
-            );
-
-            form.reset();
-
-        });
-
-        loadReviews();
-
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-<a href="https://wa.me/491629594937"
-   class="whatsapp-float"
-   target="_blank"
-   aria-label="WhatsApp Kontakt">
-    💬
-</a>
-    
 </body>
 
 </html>
